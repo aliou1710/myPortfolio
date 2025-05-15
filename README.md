@@ -1,59 +1,145 @@
-# MyPortfolio
+# Professional Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.11.
+A modern, responsive and professional portfolio built with Angular 17+ to showcase development and functional analysis skills.
 
-## Development server
+## 🚀 Features
 
-To start a local development server, run:
+- Modern and elegant design with light/dark theme support
+- Responsive layout for all devices
+- Smooth transitions and animations
+- Dynamic project showcase
+- Professional experience timeline
+- Skills and tools visualization
+- Contact form with social links
+- Lazy loaded images and components
+- Project filtering capabilities
+
+## 🛠️ Tech Stack
+
+- Angular 17+
+- Angular Material
+- TypeScript
+- SCSS
+- Angular Flex Layout
+- FontAwesome Icons
+- NgxTranslate (optional)
+
+## 📁 Project Structure
+
+```
+src/app/
+├── components/
+│   ├── home/
+│   ├── about/
+│   ├── projects/
+│   ├── experience/
+│   ├── tools/
+│   ├── mockups/
+│   ├── contact/
+│   └── admin/         # (optional)
+├── models/
+├── services/
+├── shared/
+│   ├── components/
+│   ├── directives/
+│   └── pipes/
+├── core/
+│   ├── guards/
+│   ├── interceptors/
+│   └── services/
+└── assets/
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm (v9 or higher)
+
+### Installation
+
+1. Clone the repository
+
+```bash
+git clone [repository-url]
+```
+
+2. Install dependencies
+
+```bash
+npm install
+```
+
+3. Start the development server
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+4. Navigate to `http://localhost:4200/`
 
-## Code scaffolding
+## 📱 Available Scripts
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- `ng serve` - Run development server
+- `ng build` - Build production version
+- `ng test` - Run unit tests
+- `ng lint` - Run linting
+- `ng e2e` - Run end-to-end tests
 
-```bash
-ng generate component component-name
-```
+## 🎨 Features Details
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Home
 
-```bash
-ng generate --help
-```
+- Professional introduction
+- Call-to-action buttons
+- Smooth animations
 
-## Building
+### About
 
-To build the project run:
+- Professional biography
+- Technical skills list
+- Professional certifications
 
-```bash
-ng build
-```
+### Projects
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- Dynamic project cards
+- Filtering by technology
+- GitHub/Demo links
+- Project details modal
 
-## Running unit tests
+### Experience
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+- Interactive timeline
+- Detailed role descriptions
+- Technologies used
 
-```bash
-ng test
-```
+### Tools
 
-## Running end-to-end tests
+- Development environment
+- Project management tools
+- Design tools
 
-For end-to-end (e2e) testing, run:
+### Contact
 
-```bash
-ng e2e
-```
+- Contact form
+- Social media links
+- CV download
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 🔧 Configuration
 
-## Additional Resources
+The application can be configured through various environment files:
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- `environment.ts` - Development environment
+- `environment.prod.ts` - Production environment
+
+## 📝 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 👤 Author
+
+[Your Name]
+
+- LinkedIn: [Your LinkedIn]
+- GitHub: [Your GitHub]
