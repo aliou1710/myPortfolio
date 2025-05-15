@@ -1,0 +1,112 @@
+<div class="projects-container">
+  <header class="projects-header">
+    <h1>My Projects</h1>
+    <p class="lead-text">
+      A collection of my notable projects showcasing various technologies and
+      solutions.
+    </p>
+  </header>
+
+  <!-- Filters Section -->
+  <section class="filters-section">
+    <div class="filter-group">
+      <h3>Filter by Category</h3>
+      <div class="filter-chips">
+        @for (category of getCategories(); track category) {
+        <mat-chip-option
+          [selected]="selectedCategory === category"
+          (click)="selectCategory(category)"
+          color="primary"
+        >
+          {{ category }}
+        </mat-chip-option>
+        }
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <h3>Filter by Technology</h3>
+      <div class="filter-chips">
+        @for (tech of getAllTechnologies(); track tech) {
+        <mat-chip-option
+          [selected]="selectedTechnology === tech"
+          (click)="selectTechnology(tech)"
+          color="primary"
+        >
+          {{ tech }}
+        </mat-chip-option>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Grid -->
+  <section class="projects-grid">
+    @for (project of filterProjects(); track project.id) {
+    <mat-card class="project-card">
+      @if (project.imageUrl) {
+      <img mat-card-image [src]="project.imageUrl" [alt]="project.title" />
+      }
+      <mat-card-header>
+        <mat-card-title>{{ project.title }}</mat-card-title>
+        <mat-card-subtitle>{{ project.category }}</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content>
+        <p class="project-description">{{ project.description }}</p>
+
+        <div class="project-highlights">
+          <h4>Key Features</h4>
+          <ul>
+            @for (highlight of project.highlights; track highlight) {
+            <li>{{ highlight }}</li>
+            }
+          </ul>
+        </div>
+
+        <div class="technologies-used">
+          @for (tech of project.technologies; track tech) {
+          <span class="tech-chip">{{ tech }}</span>
+          }
+        </div>
+      </mat-card-content>
+
+      <mat-card-actions>
+        @if (project.githubUrl) {
+        <a
+          mat-button
+          [href]="project.githubUrl"
+          target="_blank"
+          matTooltip="View source code"
+        >
+          <mat-icon>code</mat-icon>
+          GitHub
+        </a>
+        } @if (project.demoUrl) {
+        <a
+          mat-button
+          [href]="project.demoUrl"
+          target="_blank"
+          matTooltip="View live demo"
+        >
+          <mat-icon>launch</mat-icon>
+          Demo
+        </a>
+        }
+      </mat-card-actions>
+    </mat-card>
+    } @if (!filterProjects().length) {
+    <div class="no-results">
+      <mat-icon>search_off</mat-icon>
+      <p>No projects match the selected filters.</p>
+      <button
+        mat-button
+        color="primary"
+        (click)="selectCategory(null); selectTechnology(null)"
+      >
+        Clear Filters
+      </button>
+    </div>
+    }
+  </section>
+</div>

@@ -1,0 +1,159 @@
+<div class="experience-container" [@pageAnimation]>
+  <header class="experience-header" [@fadeAnimation]>
+    <h1>Professional Journey</h1>
+    <p class="lead-text">
+      My career path in software development and technology, showcasing
+      professional experience, education, and certifications.
+    </p>
+  </header>
+
+  <div class="timeline-container">
+    <!-- Professional Experience -->
+    <section class="timeline-section" [@listAnimation]>
+      <div class="section-header" [@fadeAnimation]>
+        <mat-icon>work</mat-icon>
+        <h2>Professional Experience</h2>
+      </div>
+
+      <div class="timeline">
+        @for (experience of getExperiencesByType('professional'); track
+        trackByFn(0, experience)) {
+        <div class="timeline-item" [@cardAnimation]>
+          <div class="timeline-marker"></div>
+          <mat-card class="timeline-content">
+            <mat-card-header>
+              <mat-icon mat-card-avatar>{{ experience.icon }}</mat-icon>
+              <mat-card-title>{{ experience.role }}</mat-card-title>
+              <mat-card-subtitle>
+                {{ experience.company }} | {{ experience.period }}
+              </mat-card-subtitle>
+            </mat-card-header>
+
+            <mat-card-content>
+              <div class="location">
+                <mat-icon>location_on</mat-icon>
+                <span>{{ experience.location }}</span>
+              </div>
+
+              <p class="description">{{ experience.description }}</p>
+
+              <div class="achievements">
+                <h4>Key Achievements</h4>
+                <ul>
+                  @for (achievement of experience.achievements; track
+                  achievement) {
+                  <li>{{ achievement }}</li>
+                  }
+                </ul>
+              </div>
+
+              <div class="technologies">
+                @for (tech of experience.technologies; track tech) {
+                <span class="tech-chip">{{ tech }}</span>
+                }
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        }
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="timeline-section" [@listAnimation]>
+      <div class="section-header" [@fadeAnimation]>
+        <mat-icon>school</mat-icon>
+        <h2>Education</h2>
+      </div>
+
+      <div class="timeline">
+        @for (education of getExperiencesByType('education'); track trackByFn(0,
+        education)) {
+        <div class="timeline-item" [@cardAnimation]>
+          <div class="timeline-marker"></div>
+          <mat-card class="timeline-content">
+            <mat-card-header>
+              <mat-icon mat-card-avatar>{{ education.icon }}</mat-icon>
+              <mat-card-title>{{ education.role }}</mat-card-title>
+              <mat-card-subtitle>
+                {{ education.company }} | {{ education.period }}
+              </mat-card-subtitle>
+            </mat-card-header>
+
+            <mat-card-content>
+              <div class="location">
+                <mat-icon>location_on</mat-icon>
+                <span>{{ education.location }}</span>
+              </div>
+
+              <p class="description">{{ education.description }}</p>
+
+              <div class="achievements">
+                <h4>Highlights</h4>
+                <ul>
+                  @for (achievement of education.achievements; track
+                  achievement) {
+                  <li>{{ achievement }}</li>
+                  }
+                </ul>
+              </div>
+
+              <div class="technologies">
+                @for (tech of education.technologies; track tech) {
+                <span class="tech-chip">{{ tech }}</span>
+                }
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        }
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="timeline-section" [@listAnimation]>
+      <div class="section-header" [@fadeAnimation]>
+        <mat-icon>verified</mat-icon>
+        <h2>Certifications</h2>
+      </div>
+
+      <div class="timeline">
+        @for (certification of getExperiencesByType('certification'); track
+        trackByFn(0, certification)) {
+        <div class="timeline-item" [@cardAnimation]>
+          <div class="timeline-marker"></div>
+          <mat-card class="timeline-content">
+            <mat-card-header>
+              <mat-icon mat-card-avatar>{{ certification.icon }}</mat-icon>
+              <mat-card-title>{{ certification.role }}</mat-card-title>
+              <mat-card-subtitle>
+                {{ certification.company }} | {{ certification.period }}
+              </mat-card-subtitle>
+            </mat-card-header>
+
+            <mat-card-content>
+              <p class="description">{{ certification.description }}</p>
+
+              <div class="achievements">
+                <h4>Key Learnings</h4>
+                <ul>
+                  @for (achievement of certification.achievements; track
+                  achievement) {
+                  <li>{{ achievement }}</li>
+                  }
+                </ul>
+              </div>
+
+              <div class="technologies">
+                @for (tech of certification.technologies; track tech) {
+                <span class="tech-chip">{{ tech }}</span>
+                }
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        }
+      </div>
+    </section>
+  </div>
+</div>

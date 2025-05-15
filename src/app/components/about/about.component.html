@@ -1,0 +1,92 @@
+<div class="about-container">
+  <!-- Professional Summary -->
+  <section class="summary-section">
+    <h1>About Me</h1>
+    <p class="lead-text">
+      I am a passionate Full-stack Developer and Functional Analyst with a
+      strong focus on creating efficient, scalable, and user-friendly solutions.
+      My expertise spans across the entire software development lifecycle, from
+      requirement analysis to deployment and maintenance.
+    </p>
+  </section>
+
+  <!-- Professional Highlights -->
+  <section class="highlights-section">
+    <h2>Professional Highlights</h2>
+    <div class="highlights-grid">
+      @for (highlight of professionalHighlights; track highlight.title) {
+      <mat-card class="highlight-card">
+        <mat-card-content>
+          <mat-icon class="highlight-icon">{{ highlight.icon }}</mat-icon>
+          <h3>{{ highlight.title }}</h3>
+          <p>{{ highlight.description }}</p>
+        </mat-card-content>
+      </mat-card>
+      }
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills-section">
+    <h2>Technical Skills</h2>
+    <div class="skills-container">
+      @for (category of getSkillCategories(); track category) {
+      <div class="skill-category">
+        <h3>{{ category }}</h3>
+        <div class="skills-grid">
+          @for (skill of getSkillsByCategory(category); track skill.name) {
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">{{ skill.name }}</span>
+              <span class="skill-level">{{ skill.level }}%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" [style.width.%]="skill.level"></div>
+            </div>
+          </div>
+          }
+        </div>
+      </div>
+      }
+    </div>
+  </section>
+
+  <!-- Professional Approach -->
+  <section class="approach-section">
+    <h2>My Approach</h2>
+    <div class="approach-cards">
+      <mat-card>
+        <mat-card-content>
+          <h3>Business Understanding</h3>
+          <p>
+            I believe in thoroughly understanding business requirements and user
+            needs before diving into technical solutions. This ensures that the
+            final product not only works well but also delivers real value.
+          </p>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card>
+        <mat-card-content>
+          <h3>Technical Excellence</h3>
+          <p>
+            I maintain high standards of code quality and follow best practices
+            in software development. This includes writing clean, maintainable
+            code and implementing robust testing strategies.
+          </p>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card>
+        <mat-card-content>
+          <h3>Continuous Learning</h3>
+          <p>
+            The tech industry evolves rapidly, and I am committed to staying
+            current with the latest technologies and methodologies. I regularly
+            engage in learning new skills and improving existing ones.
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </section>
+</div>

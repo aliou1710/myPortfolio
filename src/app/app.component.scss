@@ -1,0 +1,134 @@
+.top-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 64px;
+  background-color: var(--primary-color);
+  color: white;
+
+  .spacer {
+    flex: 1;
+  }
+}
+
+.sidenav-container {
+  min-height: 100vh;
+  padding-top: 64px;
+  background-color: var(--surface-card);
+}
+
+.sidenav {
+  width: 250px;
+  background-color: var(--surface-card);
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+  position: fixed;
+  top: 64px;
+  bottom: 0;
+
+  mat-toolbar {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    height: 64px;
+
+    span {
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+  }
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-x: hidden;
+  margin-top: 0;
+}
+
+mat-nav-list {
+  padding-top: 1rem;
+
+  a {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-primary);
+
+    mat-icon {
+      margin-left: 16px;
+      color: var(--text-secondary);
+    }
+
+    &:hover {
+      background-color: var(--surface-hover);
+    }
+
+    &.active {
+      background-color: var(--surface-hover);
+      color: var(--primary-color);
+
+      mat-icon {
+        color: var(--primary-color);
+      }
+    }
+  }
+}
+
+mat-sidenav-content {
+  background-color: var(--surface-card);
+
+  mat-toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    background-color: var(--primary-color);
+    color: white;
+
+    .spacer {
+      flex: 1 1 auto;
+    }
+
+    button {
+      margin-left: 8px;
+    }
+  }
+}
+
+.main-content {
+  padding: 24px;
+  margin-left: 250px;
+  max-width: 1200px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 599px) {
+  .top-toolbar {
+    height: 56px;
+  }
+
+  .sidenav-container {
+    padding-top: 56px;
+  }
+
+  .sidenav {
+    top: 56px;
+    width: 280px;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 16px;
+    max-width: 100%;
+  }
+}
