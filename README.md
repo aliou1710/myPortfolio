@@ -107,6 +107,9 @@ ng serve
 - Filtering by technology
 - GitHub/Demo links
 - Project details modal
+- Diabalik - A strategic board game with AI implementation (C#, Windows Forms, Deep Learning, DFS/BFS algorithms)
+
+#### Featured Projects
 
 ### Experience
 

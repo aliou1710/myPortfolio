@@ -38,10 +38,35 @@ export class ProjectsComponent {
 
   projects: Project[] = [
     {
+      id: 12,
+      title: 'Active Directory & GPO Management',
+      description:
+        "Mise en place et administration complète d'un environnement Active Directory, incluant la gestion avancée des stratégies de groupe (GPO), la sécurisation de l'infrastructure, et l'automatisation des tâches administratives.",
+      technologies: [
+        'Windows Server',
+        'Active Directory',
+        'PowerShell',
+        'Group Policy',
+        'DHCP',
+        'DNS',
+      ],
+      category: 'Backend',
+      highlights: [
+        'Configuration des stratégies de groupe (GPO)',
+        'Gestion des utilisateurs et des groupes de sécurité',
+        'Configuration DHCP et DNS',
+        "Scripts PowerShell d'automatisation",
+        'Mise en place de contrôleurs de domaine',
+        "Gestion des droits d'accès et permissions",
+        'Configuration des stratégies de mot de passe',
+        'Mise en place de sites et services AD',
+      ],
+    },
+    {
       id: 1,
       title: 'Munin',
       description:
-        'A comprehensive monitoring and visualization system for network and system performance, built with modern enterprise technologies.',
+        'Une application mobile conçue pour les techniciens terrain, permettant de remplir des fiches de tests lors des interventions de maintenance, montage, intégration ou programmation. Les formulaires sont structurés, tracés et stockés automatiquement dans SharePoint, assurant un suivi centralisé et une meilleure gestion des opérations.',
       technologies: [
         'ASP.NET Core',
         'Angular',
@@ -50,22 +75,24 @@ export class ProjectsComponent {
         'OpenShift',
         'GitLab',
         'Git',
+        'SharePoint',
+        'Mobile Development',
       ],
-      category: 'Full Stack',
+      category: 'Mobile',
       highlights: [
-        'Real-time monitoring dashboard',
-        'Custom data collectors',
-        'Performance metrics visualization',
-        'Alert system integration',
-        'Enterprise-grade security',
-        'CI/CD pipeline integration',
+        'Formulaires de tests structurés',
+        'Intégration SharePoint',
+        'Suivi des interventions terrain',
+        'Gestion des opérations de maintenance',
+        'Traçabilité automatique',
+        'Mode hors-ligne disponible',
       ],
     },
     {
       id: 2,
       title: 'Signalling',
       description:
-        'A sophisticated railway signalling system simulation and management platform using enterprise-level technologies.',
+        'A sophisticated railway signalling platform built with a micro frontend architecture, integrating multiple microservices that communicate with each other. It encompasses various functional modules, including "Munin Management", each independently developed and deployed.',
       technologies: [
         'ASP.NET Core',
         'Angular',
@@ -74,13 +101,15 @@ export class ProjectsComponent {
         'OpenShift',
         'GitLab',
         'Git',
+        'Micro Frontend',
+        'Microservices',
       ],
       category: 'Full Stack',
       highlights: [
-        'Real-time signal monitoring',
-        'Safety protocol implementation',
-        'Interactive visualization',
-        'System state management',
+        'Micro frontend architecture',
+        'Independent microservices',
+        'Module-based development',
+        'Munin Management integration',
         'Enterprise security integration',
         'Automated deployment pipeline',
       ],
@@ -104,7 +133,7 @@ export class ProjectsComponent {
       title: 'Recipe App using Docker',
       description:
         'A containerized recipe management application with Windows Forms frontend and Go backend.',
-      technologies: ['Docker', 'Go', 'Windows Forms', 'C#'],
+      technologies: ['Docker', 'Go', 'Windows Forms', 'C#', 'MySql'],
       category: 'Full Stack',
       highlights: [
         'Containerized backend services',
@@ -118,7 +147,7 @@ export class ProjectsComponent {
       title: 'Crossfit App using Spring Boot',
       description:
         'A fitness tracking application for CrossFit workouts and progress monitoring.',
-      technologies: ['Spring Boot', 'Angular', 'PostgreSQL'],
+      technologies: ['Spring Boot', 'html/css', 'PostgreSQL'],
       category: 'Full Stack',
       highlights: [
         'Workout tracking',
@@ -145,8 +174,8 @@ export class ProjectsComponent {
       id: 7,
       title: 'App Control Technique in Java',
       description:
-        'A Java-based desktop application for technical control and system management with JavaFX interface.',
-      technologies: ['Java', 'JavaFX', 'MySQL'],
+        'A Java-based desktop application for technical control and system management with Swing interface.',
+      technologies: ['Java', 'Swing', 'MySQL'],
       category: 'Backend',
       highlights: [
         'Modern desktop interface',
@@ -159,8 +188,8 @@ export class ProjectsComponent {
       id: 8,
       title: 'Grade Management in Java',
       description:
-        'A comprehensive grade management system with JavaFX interface for educational institutions.',
-      technologies: ['Java', 'JavaFX', 'MySQL'],
+        'A comprehensive grade management system with Swing interface for educational institutions.',
+      technologies: ['Java', 'Swing', 'MySQL'],
       category: 'Backend',
       highlights: [
         'Intuitive grade tracking interface',
@@ -203,6 +232,29 @@ export class ProjectsComponent {
         'Event recommendations',
         'User profile and preferences',
         'Event organizer dashboard',
+      ],
+    },
+    {
+      id: 11,
+      title: 'Diabalik - Strategic Board Game with AI',
+      description:
+        'An implementation of the abstract board game Diabalik featuring an advanced AI opponent powered by deep learning techniques. The game includes sophisticated search algorithms (DFS, BFS) for optimal move finding and a clean Windows Forms interface.',
+      technologies: [
+        'C#',
+        'Windows Forms',
+        'Deep Learning',
+        'DFS',
+        'BFS',
+        'AI',
+      ],
+      category: 'Game',
+      highlights: [
+        'Advanced AI opponent using Deep Learning',
+        'Multiple search algorithms (DFS, BFS)',
+        'Intuitive Windows Forms interface',
+        'Smart move validation system',
+        'AI performance optimization',
+        'Interactive tutorial system',
       ],
     },
   ];
